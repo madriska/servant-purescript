@@ -95,12 +95,12 @@ defaultSettings = Settings {
     _apiModuleName    = "ServerAPI"
   , _readerParams     = Set.singleton baseURLId
   , _standardImports = importsFromList
-        [ ImportLine "Affjax" (Set.fromList [ "Affjax" ])
+        [ ImportLine "Affjax" (Set.fromList [ "defaultRequest" ])
         , ImportLine "Control.Monad.Reader.Class" (Set.fromList [ "class MonadAsk", "ask" ])
         , ImportLine "Control.Monad.Error.Class" (Set.fromList [ "class MonadError" ])
         , ImportLine "Data.Nullable" (Set.fromList [ "toNullable" ])
         , ImportLine "Effect.Aff.Class" (Set.fromList [ "class MonadAff" ])
-        , ImportLine "Servant.PureScript.Ajax" (Set.fromList [ "AjaxError", "defaultRequest", "affjax" ])
+        , ImportLine "Servant.PureScript.Ajax" (Set.fromList [ "AjaxError", "ajax" ])
         , ImportLine "Servant.PureScript.Settings" (Set.fromList [ "SPSettings_(..)", "SPSettingsDecodeJson_(..)", "SPSettingsEncodeJson_(..)", "gDefaultToURLPiece" ])
         , ImportLine "Servant.PureScript.Util" (Set.fromList [ "encodeListQuery", "encodeURLPiece", "encodeQueryItem", "getResult", "encodeHeader" ])
         , ImportLine "Prim" (Set.fromList [ "String" ]) -- For baseURL!

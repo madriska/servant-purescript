@@ -128,7 +128,7 @@ genFnBody rParams req = "do"
               Just _  -> ", content =" <+> "toNullable <<< Just <<< stringify <<< encodeJson $ reqBody" </> "}"
       )
       </> if shallParseBody (req^.reqReturnType)
-          then "affResp <- affjax affReq"
+          then "affResp <- ajax affReq"
            </> "let decodeJson = case spOpts_.decodeJson of SPSettingsDecodeJson_ d -> d"
            </> "getResult affReq decodeJson affResp"
           else "_ <- affjax affReq"
